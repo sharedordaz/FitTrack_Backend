@@ -19,9 +19,8 @@ namespace Backend.Models
     public int Activity_id { get; set; }
 
     [Required]
-    [MaxLength(50)]
     [JsonPropertyName("value")]
-    public string Value { get; set; }
+    public int Value { get; set; }
 
     [Required]
     [MaxLength(20)]
@@ -47,7 +46,7 @@ namespace Backend.Models
 
     public Routine() { }
 
-    public Routine(int id, int user_id, int activity_id, string value, string unit, int repetitions = 0, DateTime? date = null, RoutineType type = RoutineType.Done)
+    public Routine(int id, int user_id, int activity_id, int value, string unit, int repetitions = 0, DateTime? date = null, RoutineType type = RoutineType.Done)
     {
       this.Id = id;
       this.User_id = user_id;
